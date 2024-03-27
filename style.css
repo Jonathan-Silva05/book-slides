@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: solid;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.livro {
+	background: #FFFFFF;
+	box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	width: 250px;
+	perspective: 1000px;
+	position: relative;
+}
+
+.pagina {
+	backface-visibility: hidden;
+	background: #FFFFFF;
+	width: 250px;
+	height: 300px;
+	position: absolute;
+	transform-origin: left;
+	transition: transform 5s ease; /* Smooth transition for flipping */
+}
+
+/* Correção para garantir visibilidade inicial das páginas */
+.pagina:nth-child(1) {
+	z-index: 10;
+}
+
+.pagina:nth-child(2) {
+	z-index: 9;
+}
+
+.pagina:nth-child(3) {
+	z-index: 8;
+}
+
+.pagina:nth-child(4) {
+	z-index: 7;
+}
+
+.pagina:nth-child(5) {
+	z-index: 6;
+}
+
+.pagina:nth-child(6) {
+	z-index: 5;
+}
+
+.pagina:nth-child(7) {
+	z-index: 4;
+}
+
+.pagina:nth-child(8) {
+	z-index: 3;
+}
+
+.pagina:nth-child(9) {
+	z-index: 2;
+}
+
+.pagina:nth-child(10) {
+	z-index: 1;
+}
+
+.flipped {
+	transform: rotateY(-180deg); /* Rotate the page for flipping effect */
+}
